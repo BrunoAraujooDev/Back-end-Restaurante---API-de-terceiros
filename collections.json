@@ -1,0 +1,535 @@
+{
+	"info": {
+		"_postman_id": "a7ae3478-907f-46b7-a8c9-228c15d38bb7",
+		"name": "Bistrô Carioca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Mesa",
+			"item": [
+				{
+					"name": "Lista Mesas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/mesa",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria Mesa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numero\": 17,\n    \"qtd_cadeiras\": 8,\n    \"ambiente\": \"Ambiente Externo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/mesa",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Altera Mesa por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numero\": 17,\n    \"qtd_cadeiras\": 4,\n    \"ambiente\": \"Ambiente Externo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/mesa/164",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mesa",
+								"164"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Pedidos da Mesa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/mesa/4",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mesa",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir Pedido",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idcardapio\": 24\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/mesa/4/insert",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mesa",
+								"4",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta Pedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/mesa/delete/314",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"mesa",
+								"delete",
+								"314"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "Autenticação",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuario\": \"Kessyus\",\n    \"senha\": \"121212\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/auth",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Usuários",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Kessyus\",\n    \"tipo\": 2,\n    \"senha\": \"121212\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/funcionario",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria Usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Gabriela\",\n    \"tipo\": \"2\",\n    \"senha\": \"121212\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/funcionario",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Altera Usuário por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Kessyus\",\n    \"tipo\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/funcionario/24",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"funcionario",
+								"24"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta Usuário por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/funcionario/34",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"funcionario",
+								"34"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cardápio",
+			"item": [
+				{
+					"name": "Lista Cardápio",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTYxOTQ0MTIwOCwiZXhwIjoxNjE5NDQ4NDA4fQ.nCB8fna3y8KTEg4JkUx-TUK7qjeIYK_Wry-niEM9tAA",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/cardapio",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cardapio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista Cardápio por ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21lIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTYxOTQ0MTIwOCwiZXhwIjoxNjE5NDQ4NDA4fQ.nCB8fna3y8KTEg4JkUx-TUK7qjeIYK_Wry-niEM9tAA",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/cardapio/4",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cardapio",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterar Item Cardápio por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"produto\": \"Camarões Empanados\",\n    \"preco\": \"69.00\",\n    \"descricao\": \"Deliciosos camarões empanados e temperados com nosso molho especial.\",\n    \"categoria\": \"Aperitivos\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/cardapio/4",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cardapio",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir Item Cardápio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"produto\": \"Kids\",\n    \"preco\": \"15.50\",\n    \"descricao\": \"Para a alegria da criançada!!!\",\n    \"categoria\": \"Infantil\",\n    \"imagem\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.IK_IOwKBEonnfeiLXZXvrwHaEK%26pid%3DApi&f=1\",\n    \"imagem_destaque\": \"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.gP9zSxHaCiW0ildMn8Ov1wHaEJ%26pid%3DApi&f=1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/cardapio",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cardapio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta Item Cardápio por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/cardapio/304",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cardapio",
+								"304"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Relatório",
+			"item": [
+				{
+					"name": "Relatório Mais Pedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocolo}}://{{host}}/relatorio",
+							"protocol": "{{protocolo}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"relatorio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const getToken = true;",
+					"const  urlLogin = `${pm.environment.get(\"protocolo\")}://${pm.environment.get(\"host\")}/auth`;",
+					"const options = { ",
+					"    method: 'POST',",
+					"    url: urlLogin,",
+					"    header: {",
+					"        'content-type': 'application/json' ",
+					"    }, ",
+					"    body: {",
+					"        mode: 'raw',",
+					"        raw: JSON.stringify({ usuario: pm.variables.get(\"usuario\"), ",
+					"          senha: pm.variables.get(\"senha\") })",
+					"    },  ",
+					"   json: true ",
+					"};",
+					"",
+					"if (getToken === true) {",
+					"    pm.sendRequest(options, function (err, res) {",
+					"    console.log(err ? err : res.json());",
+					"        if (err === null) {",
+					"           pm.environment.unset('token');",
+					"           pm.environment.set('token', res.json().token);",
+					"        console.log('token: ' + pm.environment.get('token'))",
+					"        }",
+					"    });",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "usuario",
+			"value": "Administrador"
+		},
+		{
+			"key": "senha",
+			"value": "123456"
+		}
+	]
+}

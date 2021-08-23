@@ -1,0 +1,39 @@
+{
+  "name": "controle-de-mesa-backend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node index.js",
+    "create-db": "./node_modules/.bin/sequelize db:create",
+    "migrate-db": "./node_modules/.bin/sequelize db:migrate",
+    "drop-db": "./node_modules/.bin/sequelize db:drop",
+    "seed-db": "./node_modules/.bin/sequelize db:seed:all",
+    "reset": "./node_modules/.bin/sequelize db:drop; ./node_modules/.bin/sequelize db:create; ./node_modules/.bin/sequelize db:migrate; ./node_modules/.bin/sequelize db:seed:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/kessyus/controle-de-mesa-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/kessyus/controle-de-mesa-backend/issues"
+  },
+  "homepage": "https://gitlab.com/kessyus/controle-de-mesa-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
+  }
+}

@@ -1,11 +1,8 @@
 # Controle de Mesa - Backend
 
-Backend para um _aplicativo conceito_ de um sistema de restaurante. Segundo projeto do Bootcamp Full Stack Developer do Infnet. :wink:
+Backend para um _aplicativo conceito_ de um sistema de restaurante. :wink:
 
-Desenvolvedores:
 
-- Gabriela Cristina Manzo da Silva - [Gitlab](https://gitlab.com/gabriela.silva)
-- Kessyus Fófano dos Santos - [Gitlab](https://gitlab.com/kessyus)
 
 ## Instalação e início
 
